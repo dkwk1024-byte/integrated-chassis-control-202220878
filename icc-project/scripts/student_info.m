@@ -10,16 +10,18 @@ function info = student_info()
 %
 %   본 파일을 수정하지 않으면 -5점 감점 + 채점 시트 매칭 불가.
 
-    info.student_id   = 'TODO_FILL_YOUR_STUDENT_ID';
-    info.name         = 'TODO_FILL_YOUR_NAME';
-    info.team_members = {};   % 2인 팀이면 {struct('id','...','name','...')} 추가
+    info.student_id   = '202220878';
+    info.name         = '권민수';
+    info.team_members = {
+        struct('id','202220067', 'name','유정원')
+    };   % 2인 팀이면 {struct('id','...','name','...')} 추가
 
     info.course = '자동제어 - 2026 봄';
 
     % AI 도구 사용 사실 (정직 신고) — 사용 안 했으면 'none'
     %   예: 'ChatGPT used for PID gain tuning suggestion'
     %       'Claude used to debug LQR design'
-    info.ai_usage = 'none';
+    info.ai_usage = 'ChatGPT was used to understand the project requirements, identify which files to modify, and get suggestions for controller design and debugging.';
 
     %% 검증 (수정 금지)
     if contains(info.student_id, 'TODO_FILL')
